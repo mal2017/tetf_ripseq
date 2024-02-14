@@ -1,0 +1,14 @@
+Experiment accession,sample_name,subsample_name,accession,LIBRARY_LAYOUT,input,Biological replicate(s),Technical replicate(s),target,Control.experiment
+ERR4352347,WT_47,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/007/ERR4352347/ERR4352347.fastq.gz,SINGLE,CTRL_47,1,1_1,Unr,ERR4352341
+ERR4352348,WT_48,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/008/ERR4352348/ERR4352348.fastq.gz,SINGLE,CTRL_48,2,2_2,Unr,ERR4352342
+ERR4352349,WT_49,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/009/ERR4352349/ERR4352349.fastq.gz,SINGLE,CTRL_49,3,3_1,Unr,ERR4352343
+ERR4352341,CTRL_47,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/001/ERR4352341/ERR4352341.fastq.gz,SINGLE,NA,1,1_1,NA,NA
+ERR4352342,CTRL_48,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/002/ERR4352342/ERR4352342.fastq.gz,SINGLE,NA,2,2_1,NA,NA
+ERR4352343,CTRL_49,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/003/ERR4352343/ERR4352343.fastq.gz,SINGLE,NA,3,3_1,NA,NA
+ERR4352338,274_47,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/008/ERR4352338/ERR4352338.fastq.gz,SINGLE,CTRL_47,1,1_1,Unr,ERR4352341
+ERR4352339,274_48,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/009/ERR4352339/ERR4352339.fastq.gz,SINGLE,CTRL_48,2,2_1,Unr,ERR4352342
+ERR4352340,274_49,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/000/ERR4352340/ERR4352340.fastq.gz,SINGLE,CTRL_49,3,3_1,Unr,ERR4352343
+ERR4352344,DM_47,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/004/ERR4352344/ERR4352344.fastq.gz,SINGLE,CTRL_47,1,1_1,Unr,ERR4352341
+ERR4352345,DM_48,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/005/ERR4352345/ERR4352345.fastq.gz,SINGLE,CTRL_48,2,2_1,Unr,ERR4352342
+ERR4352346,DM_49,1,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR435/006/ERR4352346/ERR4352346.fastq.gz,SINGLE,CTRL_49,3,3_1,Unr,ERR4352343
+

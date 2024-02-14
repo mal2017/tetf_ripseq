@@ -1,0 +1,33 @@
+import sys
+import peppy
+import glob
+
+pepfile: "config/pep.yaml"
+configfile: "config/config.yaml"
+
+SAMPLES = [x.sample_name for x in pep.samples]
+
+CHIPS = [x.sample_name for x in pep.samples if not list(set(x.input)) == ["NA"]]
+
+INPUTS = [x for x in SAMPLES if x not in CHIPS]
+
+localrules: all, get_fq
+
+subworkflow refs_wf:
+    workdir:
+        "../../tetf_refs/"
+    snakefile:
+        "../../tetf_refs/workflow/Snakefile"
+
+include: "rules/refs.smk"
+include: "rules/prep.smk"
+include: "rules/align.smk"
+include: "rules/stats.smk"
+
+rule all: 
+    input:
+        #expand("results/star-indices/{ref}/",ref = ["masked-genome-plus-tes"]),
+        #expand("results/trimmed/{sample}.fastp.fastq.gz", sample=SAMPLES),
+        expand("results/bams/masked-genome-plus-tes/{sample}.srt.bam",sample=SAMPLES),
+        "results/stats/masked-genome-plus-tes/all_idxstats.txt",
+
