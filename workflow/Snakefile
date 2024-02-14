@@ -11,7 +11,7 @@ CHIPS = [x.sample_name for x in pep.samples if not list(set(x.input)) == ["NA"]]
 
 INPUTS = [x for x in SAMPLES if x not in CHIPS]
 
-localrules: all, get_fq
+localrules: all, get_fq, collect_reads_per_gene
 
 subworkflow refs_wf:
     workdir:
@@ -30,4 +30,5 @@ rule all:
         #expand("results/trimmed/{sample}.fastp.fastq.gz", sample=SAMPLES),
         expand("results/bams/masked-genome-plus-tes/{sample}.srt.bam",sample=SAMPLES),
         "results/stats/masked-genome-plus-tes/all_idxstats.txt",
+        "results/star-se-counts/masked-genome-plus-tes/combined.ReadsPerGene.out.tab",
 

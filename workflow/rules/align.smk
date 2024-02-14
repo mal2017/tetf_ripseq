@@ -24,6 +24,15 @@ rule star_se:
     wrapper:
         "v3.3.3/bio/star/align"
 
+rule collect_reads_per_gene:
+    input:
+        expand("results/star-se/{{ref}}/{s}/ReadsPerGene.out.tab",s=SAMPLES)
+    output:
+        "results/star-se-counts/{ref}/combined.ReadsPerGene.out.tab"
+    shell:
+        """
+        awk '{{split(FILENAME,a,"/"); print $0 "\t" a[4]}}' {input} > {output}
+        """
 
 rule samtools_prep:
     """
